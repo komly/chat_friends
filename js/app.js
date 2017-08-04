@@ -51,7 +51,7 @@ d3.json('/chat_friends/data.json', function(err, data) {
 	var sim = d3.forceSimulation()
 		.nodes(nodes)
 		.force("collide", d3.forceCollide(50))
-		.force("charge", d3.forceManyBody().strength(-100))
+		.force("charge", d3.forceManyBody())
 		.force("center", d3.forceCenter(width / 2, height / 2))
 		.force("link", d3.forceLink(links).id(function(d) {
 			return d.id;
