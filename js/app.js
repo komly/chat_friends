@@ -10,7 +10,7 @@ var width = 800,
     nodes = [];
     links = [];
 
-d3.json('data.json', function(err, data) {
+d3.json('/chat_friends/data.json', function(err, data) {
 	nodes = data.response;
 	ids = nodes.map(function(n) {
 		return n.id;
